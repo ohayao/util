@@ -18,7 +18,7 @@ func GetString(path string) string {
 func GetJSON(path string, value interface{}) error {
 	bs, err := os.ReadFile(path)
 	if err != nil {
-		return nil
+		return err
 	}
 	return json.Unmarshal(bs, value)
 }
