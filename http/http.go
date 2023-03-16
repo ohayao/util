@@ -99,7 +99,6 @@ func (that *Client) Get() (*Response, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("---->>>", url)
 	body, err := io.ReadAll(response.Body)
 	if err != nil {
 		return nil, err
